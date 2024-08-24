@@ -1,0 +1,6 @@
+@InfoShelf.Server_HostAddress = http://localhost:5200
+
+GET {{InfoShelf.Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
