@@ -9,22 +9,22 @@ namespace InfoShelf.Server.Infraestructure.Repositories
     {
         private readonly BookContext _bookContext = bookContext;
 
-        public async Task<bool> CreateAsync(Book book)
+        public async Task CreateAsync(Book book)
         {
             _bookContext.Books.Add(book);
-            return await _bookContext.SaveChangesAsync() > 0;
+            await _bookContext.SaveChangesAsync();
         }
 
-        public async Task<bool> DeleteAsync(Book book)
+        public async Task DeleteAsync(Book book)
         {
             _bookContext.Books.Remove(book);
-            return await _bookContext.SaveChangesAsync() > 0;
+            await _bookContext.SaveChangesAsync();
         }
 
-        public async Task<bool> EditAsync(Book book)
+        public async Task EditAsync(Book book)
         {
             _bookContext.Books.Update(book);
-            return await _bookContext.SaveChangesAsync() > 0;
+            await _bookContext.SaveChangesAsync();
         }
 
         public async Task<Book?> GetBookId(int idBook)
