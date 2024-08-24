@@ -4,9 +4,9 @@ namespace InfoShelf.Server.Domain.Interfaces.Respositories
 {
     public interface IBookRepository
     {
-        public Task<bool> CreateAsync(Book book);
-        public Task<bool> DeleteAsync(Book book);
-        public Task<bool> EditAsync(Book book);
+        public Task CreateAsync(Book book);
+        public Task DeleteAsync(Book book);
+        public Task EditAsync(Book book);
         public Task<Book?> GetBookId(int idBook);
         public Task<List<Book>> ListBook();
     }
