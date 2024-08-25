@@ -10,6 +10,8 @@ import { AppComponent } from './app.component';
 import { CreateBookComponent } from './pages/create-book/create-book.component';
 import { EditBookComponent } from './pages/edit-book/edit-book.component';
 import { HomeComponent } from './pages/home/home.component';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 @NgModule({
@@ -23,8 +25,10 @@ import { HomeComponent } from './pages/home/home.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     BrowserModule,
+    FontAwesomeModule,
     FormsModule,
     HttpClientModule,
+    MatPaginatorModule,
     MatTableModule,
     ReactiveFormsModule,
     ToastrModule

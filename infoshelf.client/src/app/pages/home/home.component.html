@@ -28,6 +28,8 @@
       <tr mat-row *matRowDef="let row; columns: booksColumns;"></tr>
     </table>
   </div>
+  <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons aria-label="Selecione a pagina">
+  </mat-paginator>
   <div>
     <div class="card-footer text-end">
       <button class="btn btn-primary" (click)="createBook()">Inserir</button>

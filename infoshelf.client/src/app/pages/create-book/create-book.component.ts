@@ -15,7 +15,7 @@ export class CreateBookComponent {
     titulo: new FormControl("", Validators.required),
     autor: new FormControl("", Validators.required),
     genero: new FormControl("", Validators.required),
-    ano: new FormControl("", [Validators.required]),
+    ano: new FormControl("", Validators.required),
   });
 
   constructor(private router: Router, private bookService: BookService, private toastr: ToastrService) { }
