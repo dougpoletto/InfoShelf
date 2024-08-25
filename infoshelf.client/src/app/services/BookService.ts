@@ -1,6 +1,7 @@
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { firstValueFrom, Observable } from "rxjs";
+import { BookDto } from "../models/BookDto";
 
 @Injectable({ providedIn: "root" })
 export class BookService {
@@ -12,5 +13,9 @@ export class BookService {
 
   async getListBooks(): Promise<any> {
     return await firstValueFrom(this.httpClient.get(`${this.baseUrl}/getListBooks`));
+  }
+
+  async postBook(data: BookDto): Promise<any> {
+    return await firstValueFrom(this.httpClient.post(`${this.baseUrl}/createBook`, data));
   }
 }
